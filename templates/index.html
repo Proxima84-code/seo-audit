@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>AI SEO Audit – Proxima</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 AI SEO Audit – Proxima</h1>
+    <form method="post">
+      <input type="text" name="url" placeholder="Wpisz adres strony" required>
+      <button type="submit">Analizuj</button>
+    </form>
+    {% if result %}
+      <div class="result">
+        <h2>Wynik:</h2>
+        <p>{{ result }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
